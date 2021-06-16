@@ -1,21 +1,19 @@
 ## Table of Contents
 
-- [Demo](#demo)
+ 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Options](#options)
 - [Todo](#todo)
 - [License](#license)
 
-## Demo
-
-[Demo](https://primetwig.github.io/react-nestable/dist/example/)
+ 
 
 
 ## Installation
 
 ```
-npm install -save react-nestable
+npm install -save @asith-w/react-nav-tree
 ```
 
 ## Usage
