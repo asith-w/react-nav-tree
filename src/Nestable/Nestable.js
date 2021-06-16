@@ -48,6 +48,7 @@ class Nestable extends Component {
     onChange: PropTypes.func,
     renderCollapseIcon: PropTypes.func,
     renderItem: PropTypes.func,
+    renderActionItem: PropTypes.func,
     threshold: PropTypes.number,
   };
   static defaultProps = {

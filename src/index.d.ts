@@ -1,4 +1,4 @@
-declare module 'react-nestable' {
+declare module 'react-nav-tree-dnd' {
   import * as React from 'react';
 
   export type Item = Record<string, any>;
@@ -35,6 +35,13 @@ declare module 'react-nestable' {
         collapseIcon: React.ReactNode;
         depth: number;
         handler: React.ReactNode;
+        index: number;
+        item: Item;
+      }
+    ) => React.ReactNode;
+    renderActionItem?: (
+      arg: {         
+        depth: number;        
         index: number;
         item: Item;
       }

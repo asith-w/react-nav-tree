@@ -1,4 +1,4 @@
-declare module 'react-nestable' {
+declare module 'react-nav-tree-dnd' {
   import * as React from 'react';
 
   export type Item = Record<string, any>;

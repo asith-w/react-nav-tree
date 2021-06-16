@@ -20,12 +20,12 @@ npm install -save react-nav-tree-dnd
 ## Usage
 
 ```
-import Nestable from 'react-nestable';
+import Nestable from 'react-nav-tree-dnd';
 
 // this usually goes once
 // to the entry point of the whole app
 // (e.g. src/index.js)
-import 'react-nestable/dist/styles/index.css';
+import 'react-nav-tree-dnd/dist/styles/index.css';
 ```
 every item must have a unique `id` in order to distinguish elements
 ```

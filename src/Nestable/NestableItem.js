@@ -30,6 +30,7 @@ class NestableItem extends Component {
     const {
       dragItem,
       renderItem,
+      renderActionItem,
       handler,
       idProp,
       childrenProp,
@@ -75,19 +76,21 @@ class NestableItem extends Component {
           {renderCollapseIcon({ isCollapsed })}
         </span>
       )
-      : null;
+      : <span onClick={() => options.onToggleCollapse(item)}>
+        {renderCollapseIcon({ isCollapsed })}
+      </span>;
 
     const baseClassName = 'nestable-item' + (isCopy ? '-copy' : '');
     const itemProps = {
       className: cx(
-          baseClassName,
-          baseClassName + '-' + item[idProp],
-          {
-            'is-dragging': isDragging,
-            [baseClassName + '--with-children']: hasChildren,
-            [baseClassName + '--children-open']: hasChildren && !isCollapsed,
-            [baseClassName + '--children-collapsed']: hasChildren && isCollapsed,
-          }
+        baseClassName,
+        baseClassName + '-' + item[idProp],
+        {
+          'is-dragging': isDragging,
+          [baseClassName + '--with-children']: hasChildren,
+          [baseClassName + '--children-open']: hasChildren && !isCollapsed,
+          [baseClassName + '--children-collapsed']: hasChildren && isCollapsed,
+        }
       )
     };
 
@@ -95,6 +98,14 @@ class NestableItem extends Component {
       collapseIcon,
       depth,
       handler: wrappedHandler,
+      index,
+      item,
+    });
+
+    const actionsContent = renderActionItem({
+      //collapseIcon,
+      depth,
+      //handler: wrappedHandler,
       index,
       item,
     });
@@ -123,6 +134,7 @@ class NestableItem extends Component {
             })}
           </ol>
         )}
+        {!isCollapsed && actionsContent}
       </li>
     );
   }
