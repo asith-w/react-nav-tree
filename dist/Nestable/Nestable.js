@@ -604,6 +604,7 @@ var Nestable = /*#__PURE__*/function (_Component) {
     value: function getItemOptions() {
       var _this$props14 = this.props,
           renderItem = _this$props14.renderItem,
+          renderActionItem = _this$props14.renderActionItem,
           renderCollapseIcon = _this$props14.renderCollapseIcon,
           handler = _this$props14.handler,
           idProp = _this$props14.idProp,
@@ -614,6 +615,7 @@ var Nestable = /*#__PURE__*/function (_Component) {
         idProp: idProp,
         childrenProp: childrenProp,
         renderItem: renderItem,
+        renderActionItem: renderActionItem,
         renderCollapseIcon: renderCollapseIcon,
         handler: handler,
         onDragStart: this.onDragStart,
@@ -715,6 +717,10 @@ _defineProperty(Nestable, "defaultProps", {
   onChange: function onChange() {},
   renderItem: function renderItem(_ref2) {
     var item = _ref2.item;
+    return String(item);
+  },
+  renderActionItem: function renderActionItem(_ref3) {
+    var item = _ref3.item;
     return String(item);
   },
   threshold: 30

@@ -61,6 +61,7 @@ class Nestable extends Component {
     maxDepth: 10,
     onChange: () => {},
     renderItem: ({ item }) => String(item),
+    renderActionItem: ({ item }) => String(item),
     threshold: 30,
   };
 
@@ -394,6 +395,7 @@ class Nestable extends Component {
   getItemOptions() {
     const {
       renderItem,
+      renderActionItem,
       renderCollapseIcon,
       handler,
       idProp,
@@ -406,6 +408,7 @@ class Nestable extends Component {
       idProp,
       childrenProp,
       renderItem,
+      renderActionItem,
       renderCollapseIcon,
       handler,
 
