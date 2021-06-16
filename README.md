@@ -13,7 +13,8 @@
 ## Installation
 
 ```
-npm install -save @asith-w/react-nav-tree
+npm install -save react-nav-tree-dnd
+
 ```
 
 ## Usage
