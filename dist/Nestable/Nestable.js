@@ -698,6 +698,7 @@ _defineProperty(Nestable, "propTypes", {
   onChange: _propTypes["default"].func,
   renderCollapseIcon: _propTypes["default"].func,
   renderItem: _propTypes["default"].func,
+  renderActionItem: _propTypes["default"].func,
   threshold: _propTypes["default"].number
 });
 

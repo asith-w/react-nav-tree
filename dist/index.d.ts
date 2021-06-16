@@ -39,6 +39,13 @@ declare module 'react-nav-tree-dnd' {
         item: Item;
       }
     ) => React.ReactNode;
+    renderActionItem?: (
+      arg: {         
+        depth: number;        
+        index: number;
+        item: Item;
+      }
+    ) => React.ReactNode;
     threshold?: number;
   }> {}
 }

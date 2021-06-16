@@ -91,6 +91,7 @@ var NestableItem = /*#__PURE__*/function (_Component) {
           depth = _this$props.depth;
       var dragItem = options.dragItem,
           renderItem = options.renderItem,
+          renderActionItem = options.renderActionItem,
           handler = options.handler,
           idProp = options.idProp,
           childrenProp = options.childrenProp,
@@ -134,7 +135,13 @@ var NestableItem = /*#__PURE__*/function (_Component) {
         }
       }, renderCollapseIcon({
         isCollapsed: isCollapsed
-      })) : null;
+      })) : /*#__PURE__*/_react["default"].createElement("span", {
+        onClick: function onClick() {
+          return options.onToggleCollapse(item);
+        }
+      }, renderCollapseIcon({
+        isCollapsed: isCollapsed
+      }));
       var baseClassName = 'nestable-item' + (isCopy ? '-copy' : '');
       var itemProps = {
         className: (0, _classnames["default"])(baseClassName, baseClassName + '-' + item[idProp], (_cx = {
@@ -145,6 +152,13 @@ var NestableItem = /*#__PURE__*/function (_Component) {
         collapseIcon: collapseIcon,
         depth: depth,
         handler: wrappedHandler,
+        index: index,
+        item: item
+      });
+      var actionsContent = renderActionItem({
+        //collapseIcon,
+        depth: depth,
+        //handler: wrappedHandler,
         index: index,
         item: item
       });
@@ -162,7 +176,7 @@ var NestableItem = /*#__PURE__*/function (_Component) {
           options: options,
           isCopy: isCopy
         });
-      })));
+      })), !isCollapsed && actionsContent);
     }
   }]);
 
