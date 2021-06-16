@@ -1,5 +1,5 @@
 {
-  "name": "react-nav-tree",
+  "name": "@asith-w/react-nav-tree",
   "version": "2.0.0",
   "description": "Drag & drop hierarchical list made as a react component",
   "main": "dist/index.js",
